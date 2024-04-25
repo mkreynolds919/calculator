@@ -28,7 +28,13 @@ function operate(a, b, operator) {
 }
 
 const display = document.querySelector(".display-container");
-let displayContent = display.textContent;
+let displayContent = display.innerHTML;
 const arr = displayContent.split(' ');
 let a = arr[0], operator = arr[1], b = arr[2];
 
+const nums = document.querySelectorAll(".number-container button");
+nums.forEach((button) => {
+    button.addEventListener("click", () => {
+        displayContent = ` ${button.id}`;
+    });
+});
