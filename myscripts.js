@@ -39,4 +39,9 @@ nums.forEach((btn) => {
     })
 })
 
-const operators = document.querySelector
+const operators = document.querySelectorAll(".operator");
+operators.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        display.textContent += ` ${btn.textContent} `;
+    })
+})
