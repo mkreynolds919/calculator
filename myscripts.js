@@ -45,3 +45,8 @@ operators.forEach((btn) => {
         display.textContent += ` ${btn.textContent} `;
     })
 })
+
+const clear = document.querySelector("#clear");
+clear.addEventListener("click", () => {
+    display.textContent = "";
+})
