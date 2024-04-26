@@ -50,3 +50,8 @@ const clear = document.querySelector("#clear");
 clear.addEventListener("click", () => {
     display.textContent = "";
 })
+
+const equals = document.querySelector("#equals");
+equals.addEventListener("click", () => {
+    display.textContent = operate(a, b, operator);
+})
