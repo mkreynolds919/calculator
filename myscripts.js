@@ -32,3 +32,11 @@ let displayContent = display.textContent;
 const arr = displayContent.split(' ');
 let a = arr[0], operator = arr[1], b = arr[2];
 
+const nums = document.querySelectorAll(".number-container button");
+nums.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        display.textContent += `${btn.id}`;
+    })
+})
+
+const operators = document.querySelector
