@@ -76,7 +76,7 @@ button {
     border-radius: 8px;
 }
 
-#zero {
+.zero {
     width: 164px;
     flex: 2.2;
 }
