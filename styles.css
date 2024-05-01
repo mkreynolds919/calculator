@@ -37,12 +37,16 @@ body {
 }
 
 .display-container {
-    text-align: center;
+    display: flex;
+    font-size: 40px;
+    justify-content: right;
+    align-items: center;
     background-color: white;
     height: 50px;
-    padding: 10px;
+    padding: 2px;
     border-radius: 8px;
     border: 2px solid black;
+    margin: 0;
 }
 
 .input-container {
