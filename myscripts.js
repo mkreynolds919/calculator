@@ -27,32 +27,4 @@ function operate(a, b, operator) {
     }
 }
 
-const display = document.querySelector(".display-text");
-let arr = display.textContent.split(' ');
-
-
-const nums = document.querySelectorAll(".number-container button");
-nums.forEach((btn) => {
-    btn.addEventListener("click", () => {
-        display.textContent += `${btn.id}`;
-    })
-})
-
-const operators = document.querySelectorAll(".operator");
-operators.forEach((btn) => {
-    btn.addEventListener("click", () => {
-        display.textContent += ` ${btn.textContent} `;
-    })
-})
-
-const clear = document.querySelector("#clear");
-clear.addEventListener("click", () => {
-    display.textContent = "";
-})
-
-const equals = document.querySelector("#equals");
-equals.addEventListener("click", () => {
-    arr = display.textContent.split(' ');
-    let a = parseInt(arr[0]), operator = arr[1], b = parseInt(arr[2]);
-    display.textContent = operate(a, b, operator);
-})
+let displayText =  document.querySelector(".display-text");
