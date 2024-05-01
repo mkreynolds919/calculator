@@ -8,20 +8,28 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="parent">
+    <div class="calculator-container">
         <div class="display-container"></div>
         <div class="input-container">
-            <div class="number-container">
-                <button id="7">7</button>
-                <button id="8">8</button>
-                <button id="9">9</button>
-                <button id="4">4</button>
-                <button id="5">5</button>
-                <button id="6">6</button>
-                <button id="1">1</button>
-                <button id="2">2</button>
-                <button id="3">3</button>
-                <button id="0">0</button>
+            <div class="parent">
+                <div class="misc-conatiner">
+                    <button id="clear">AC</button>
+                    <button id="backspace">BACK</button>
+                    <button id="signs">+/-</button>
+                </div>
+                <div class="number-container">
+                    <button id="7">7</button>
+                    <button id="8">8</button>
+                    <button id="9">9</button>
+                    <button id="4">4</button>
+                    <button id="5">5</button>
+                    <button id="6">6</button>
+                    <button id="1">1</button>
+                    <button id="2">2</button>
+                    <button id="3">3</button>
+                    <button id="0">0</button>
+                    <button id="decimal">.</button>
+                </div>
             </div>
             <div class="operation-container">
                 <button class="operator" id="add">+</button>
@@ -29,7 +37,6 @@
                 <button class="operator" id="multiply">x</button>
                 <button class="operator" id="divide">/</button>
                 <button id="equals">=</button>
-                <button id="clear">CLEAR</button>
             </div>
         </div>
     </div>
