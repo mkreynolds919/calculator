@@ -89,3 +89,11 @@ button {
 .number-container button {
     background-color: #007AC1;
 }
+
+.operation-container button {
+    background-color: #EF3B24;
+}
+
+.misc-container button {
+    background-color: #FDBB30;
+}
