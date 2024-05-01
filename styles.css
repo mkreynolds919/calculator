@@ -15,6 +15,7 @@ body {
     border-radius: 15px;
     border: 2px solid black;
     gap: 4px;
+    background-color: #002D62;;
 }
 
 
@@ -83,4 +84,8 @@ button {
 .margin-gap {
     gap: 2px;
     margin: 0px;
+}
+
+.number-container button {
+    background-color: #007AC1;
 }
