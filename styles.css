@@ -6,39 +6,59 @@ body {
     justify-content: center;
 }
 
-.parent {
+.calculator-container {
     display: flex;
     flex-direction: column;
-    gap: 100px;
-    padding: 25px;
-    width: 400px;
-    height: 600px;
+    padding: 5px;
+    width: 30vw;
     background-color: grey;
     border-radius: 15px;
     border: 2px solid black;
+    gap: 4px;
+    background-color: #002D62;;
+}
+
+
+.parent {
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+}
+
+.misc-container {
+    display: flex;
+    
+}
+
+.operation-container {
+    flex: 1;
+}
+
+#decimal {
 }
 
 .display-container {
-    text-align: center;
+    display: flex;
+    font-size: 40px;
+    justify-content: right;
+    align-items: center;
     background-color: white;
-    height: 25px;
-    margin: 25px;
-    padding: 10px;
+    height: 50px;
+    padding: 2px;
     border-radius: 8px;
     border: 2px solid black;
+    margin: 0;
 }
 
 .input-container {
     display: flex;
-    justify-content: space-between;
+    gap: 0px;
 }
 
 .number-container {
-    flex: 1.5;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 5px;
 }
 
 .operation-container {
@@ -46,12 +66,26 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 10px;
 }
 
 button {
-    width: 70px;
+    flex: 1;
+    min-width: 80px;
+    min-height: 70px;
     padding: 10px;
     border-radius: 8px;
+}
+
+#zero {
+    width: 164px;
+    flex: 2.38;
+}
+
+.margin-gap {
+    gap: 2px;
+    margin: 0px;
+}
+
+.number-container button {
+    background-color: #007AC1;
 }
