@@ -27,7 +27,7 @@ function operate(a, b, operator) {
     }
 }
 
-const display = document.querySelector(".display-container");
+const display = document.querySelector(".display-text");
 let arr = display.textContent.split(' ');
 
 
