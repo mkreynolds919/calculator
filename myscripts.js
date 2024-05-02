@@ -33,11 +33,35 @@ displayText.textContent = 0;
 
 let displayNumber = "";
 let reserveNumber = "";
+let operator = "";
 
 const nums = document.querySelectorAll(".number-container button");
 nums.forEach((button) => {
     button.addEventListener("click", () => {
         displayNumber += button.textContent;
         displayText.textContent = displayNumber;
+    });
+});
+
+const operators = document.querySelectorAll(".operator");
+operators.forEach((button) => {
+    button.addEventListener("click", () => {
+        if (operator === "") {
+            operator = button.textContent;
+            reserveNumber = displayText.textContent;
+            displayNumber = "";
+        } else {
+            operator = button.textContent;
+            displayText.textContent = operate(parseInt(reserveNumber), parseInt(displayNumber), operator);
+            reserveNumber = displayText.textContent;
+            displayNumber = "";
+        }
     })
+})
+
+const equals = document.querySelector("#equals");
+equals.addEventListener("click", () => {
+    displayNumber = displayText.textContent;
+    displayText.textContent = operate(parseInt(reserveNumber), parseInt(displayNumber), operator);
+    operator = "";
 })
