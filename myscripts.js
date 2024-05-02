@@ -28,3 +28,16 @@ function operate(a, b, operator) {
 }
 
 let displayText =  document.querySelector(".display-text");
+displayText.textContent = 0;
+
+
+let displayNumber = "";
+let reserveNumber = "";
+
+const nums = document.querySelectorAll(".number-container button");
+nums.forEach((button) => {
+    button.addEventListener("click", () => {
+        displayNumber += button.textContent;
+        displayText.textContent = displayNumber;
+    })
+})
