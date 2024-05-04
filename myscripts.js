@@ -65,3 +65,11 @@ equals.addEventListener("click", () => {
     displayText.textContent = operate(parseInt(reserveNumber), parseInt(displayNumber), operator);
     operator = "";
 })
+
+const clear = document.querySelector("#clear");
+clear.addEventListener("click", () => {
+    displayNumber = "0";
+    reserveNumber = "";
+    operator = "";
+    displayText.textContent = "0";
+})
