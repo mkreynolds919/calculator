@@ -68,8 +68,8 @@ equals.addEventListener("click", () => {
 
 const clear = document.querySelector("#clear");
 clear.addEventListener("click", () => {
-    displayNumber = "0";
+    displayNumber = "";
     reserveNumber = "";
     operator = "";
-    displayText.textContent = "0";
+    displayText.textContent = 0;
 })
