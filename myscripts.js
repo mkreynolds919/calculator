@@ -23,6 +23,9 @@ function operate(a, b, operator) {
         case "x":
             return multiply(a,b);
         case "/":
+            if (b == 0) {
+                return "You tried it!";
+            }
             return divide(a,b);
     }
 }
