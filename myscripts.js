@@ -1,3 +1,9 @@
+
+// These functions return the individual answers for each calculation //
+// parseFloat is there to allow decimals //
+// toFixed is there to round long decimals to 6 places to avoid running offscreen //
+// Multiplying by 1 removes trailing zeroes from decimals after being run through toFixed //
+
 function add(a, b) {
     return 1 * parseFloat(a + b).toFixed(6);
 }
@@ -13,6 +19,9 @@ function multiply(a, b) {
 function divide(a, b) {
     return 1 * parseFloat(a / b).toFixed(6);
 }
+
+// The operate function uses switch to find the correct math function to run //
+// Message added for trying to divide by zero //
 
 function operate(a, b, operator) {
     switch(operator) {
@@ -30,13 +39,20 @@ function operate(a, b, operator) {
     }
 }
 
+// Identifies text div within display-container //
+// Intially set to 0 for a clean, calculator setting //
+
 let displayText =  document.querySelector(".display-text");
 displayText.textContent = 0;
 
+// Empty values are set so functions can compare values //
 
 let displayNumber = "";
 let reserveNumber = "";
 let operator = "";
+
+// Identifies number buttons (not decimal) //
+// Concatenates the button text to the displayNumber value, then updates the displayText value as that number //
 
 const nums = document.querySelectorAll(".number");
 nums.forEach((button) => {
@@ -46,6 +62,10 @@ nums.forEach((button) => {
     });
 });
 
+// Identifies decimal number by id //
+// If displayText value already has a decimal, you cannot place another one //
+// If it does not, adds decimal point to that value and displayNumber //
+
 const decimal = document.querySelector("#decimal");
 decimal.addEventListener("click", () => {
     if (!displayNumber.includes(".")) {
@@ -54,6 +74,10 @@ decimal.addEventListener("click", () => {
     }
 });
 
+// Identifies operator buttons //
+// If no other operator has been used, simply shifts displayNumber to reserveNumber value, clears displayNumber, and asserts an operator //
+// If another operator has already been used (without equals), performs operate with reserveNumber, displayNumber, and the previous operator //
+// Then, it asserts itself as the new operator, with reserveNumber being updated to the operated answer value //
 
 const operators = document.querySelectorAll(".operator");
 operators.forEach((button) => {
@@ -71,6 +95,11 @@ operators.forEach((button) => {
     })
 })
 
+// Identifies equals button //
+// Sets displayText as displayNumber and updates it to be the operated answer of reserveNumber, displayNumber, and operator //
+// parseFloat is run to avoid string-type operations //
+// operator is then cleared and displayNumber is reassigned //
+
 const equals = document.querySelector("#equals");
 equals.addEventListener("click", () => {
     displayNumber = displayText.textContent;
@@ -79,6 +108,9 @@ equals.addEventListener("click", () => {
     displayNumber = displayText.textContent;
 })
 
+// Identifies clear button //
+// Sets every value equal to their starting value: nothing //
+
 const clear = document.querySelector("#clear");
 clear.addEventListener("click", () => {
     displayNumber = "";
@@ -86,6 +118,9 @@ clear.addEventListener("click", () => {
     operator = "";
     displayText.textContent = 0;
 })
+
+// Identifies signs button // 
+// Simply multiplies the value by -1 and updates the displayText content to reflect that update //
 
 const signs = document.querySelector("#signs");
 signs.addEventListener("click", () => {
