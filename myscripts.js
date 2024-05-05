@@ -1,13 +1,13 @@
 function add(a, b) {
-    return a + b;
+    return 1 * parseFloat(a + b).toFixed(10);
 }
 
 function subtract(a, b) {
-    return a - b;
+    return 1 * parseFloat(a - b).toFixed(10);
 }
 
 function multiply(a, b) {
-    return a * b;
+    return 1 * parseFloat(a * b).toFixed(10);
 }
 
 function divide(a, b) {
