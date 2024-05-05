@@ -58,13 +58,13 @@ decimal.addEventListener("click", () => {
 const operators = document.querySelectorAll(".operator");
 operators.forEach((button) => {
     button.addEventListener("click", () => {
-        if (operator === "") {
+        if (operator == "") {
             operator = button.textContent;
             reserveNumber = displayText.textContent;
             displayNumber = "";
         } else {
-            operator = button.textContent;
             displayText.textContent = operate(parseFloat(reserveNumber), parseFloat(displayNumber), operator);
+            operator = button.textContent;
             reserveNumber = displayText.textContent;
             displayNumber = "";
         }
@@ -76,6 +76,7 @@ equals.addEventListener("click", () => {
     displayNumber = displayText.textContent;
     displayText.textContent = operate(parseFloat(reserveNumber), parseFloat(displayNumber), operator);
     operator = "";
+    displayNumber = displayText.textContent;
 })
 
 const clear = document.querySelector("#clear");
@@ -84,4 +85,11 @@ clear.addEventListener("click", () => {
     reserveNumber = "";
     operator = "";
     displayText.textContent = 0;
+})
+
+const signs = document.querySelector("#signs");
+signs.addEventListener("click", () => {
+    displayNumber = displayText.textContent;
+    displayNumber = (-1 * displayNumber);
+    displayText.textContent = displayNumber;
 })
