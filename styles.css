@@ -104,3 +104,15 @@ img {
 .input-container button {
     font-size: 32px;
 }
+
+.number-container button:active:hover {
+    background-color: rgb(20, 142, 213);
+}
+
+.operation-container button:active:hover {
+    background-color: rgb(259, 79, 56);
+}
+
+.misc-container button:active:hover {
+    background-color: rgb(273, 207, 68);
+}

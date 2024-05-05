@@ -54,6 +54,7 @@ decimal.addEventListener("click", () => {
     }
 });
 
+
 const operators = document.querySelectorAll(".operator");
 operators.forEach((button) => {
     button.addEventListener("click", () => {
