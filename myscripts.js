@@ -38,12 +38,20 @@ let displayNumber = "";
 let reserveNumber = "";
 let operator = "";
 
-const nums = document.querySelectorAll(".number-container button");
+const nums = document.querySelectorAll(".number");
 nums.forEach((button) => {
     button.addEventListener("click", () => {
         displayNumber += button.textContent;
         displayText.textContent = displayNumber;
     });
+});
+
+const decimal = document.querySelector("#decimal");
+decimal.addEventListener("click", () => {
+    if (displayNumber.includes(".")) {
+        displayNumber += decimal.textContent;
+        displayText.textContent = displayNumber;
+    }
 });
 
 const operators = document.querySelectorAll(".operator");
