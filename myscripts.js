@@ -48,7 +48,7 @@ nums.forEach((button) => {
 
 const decimal = document.querySelector("#decimal");
 decimal.addEventListener("click", () => {
-    if (displayNumber.includes(".")) {
+    if (!displayNumber.includes(".")) {
         displayNumber += decimal.textContent;
         displayText.textContent = displayNumber;
     }
