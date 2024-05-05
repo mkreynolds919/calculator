@@ -128,3 +128,16 @@ signs.addEventListener("click", () => {
     displayNumber = (-1 * displayNumber);
     displayText.textContent = displayNumber;
 })
+
+// Identifies backspace button //
+// Slices the last character from displayNumber string and reassigns //
+// If displayNumber is blank, changes displayText to 0 //
+
+const back = document.querySelector("#backspace");
+back.addEventListener("click", () => {
+    displayNumber = displayNumber.slice(0, -1);
+    displayText.textContent = displayNumber;
+    if (displayNumber == "") {
+        displayText.textContent = 0;
+    }
+})
