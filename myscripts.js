@@ -55,7 +55,7 @@ operators.forEach((button) => {
             displayNumber = "";
         } else {
             operator = button.textContent;
-            displayText.textContent = operate(parseInt(reserveNumber), parseInt(displayNumber), operator);
+            displayText.textContent = operate(parseFloat(reserveNumber), parseFloat(displayNumber), operator);
             reserveNumber = displayText.textContent;
             displayNumber = "";
         }
@@ -65,7 +65,7 @@ operators.forEach((button) => {
 const equals = document.querySelector("#equals");
 equals.addEventListener("click", () => {
     displayNumber = displayText.textContent;
-    displayText.textContent = operate(parseInt(reserveNumber), parseInt(displayNumber), operator);
+    displayText.textContent = operate(parseFloat(reserveNumber), parseFloat(displayNumber), operator);
     operator = "";
 })
 
