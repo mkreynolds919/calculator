@@ -11,7 +11,7 @@ function multiply(a, b) {
 }
 
 function divide(a, b) {
-    return a / b;
+    return 1 * parseFloat(a / b).toFixed(10);
 }
 
 function operate(a, b, operator) {
